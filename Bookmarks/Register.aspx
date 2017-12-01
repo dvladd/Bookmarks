@@ -12,7 +12,7 @@
         }
 
         .main {
-            margin-top: 70px;
+            margin-top: 0px;
         }
 
         h1.title {
@@ -37,7 +37,7 @@
         input,
         input::-webkit-input-placeholder {
             font-size: 11px;
-            padding-top: 3px;
+            padding-top: 0px;
         }
 
         .main-login {
@@ -70,23 +70,36 @@
 
     <div class="container">
         <div class="row main">
-            <div class="panel-heading">
+            <%--<div class="panel-heading">
                 <div class="panel-title text-center">
-                    <h1 class="title">Bookmarks</h1>
+                    <h2 class="title">Register here..</h2>
                     <hr />
-                </div>
-            </div>
+                </div>ss
+            </div>--%>
             <div class="main-login main-center">
+            <asp:Literal ID="EroareBazaDate" runat="server"></asp:Literal>
                 <div class="form-horizontal" >
 
                     <div class="form-group">
-                        <label for="name" class="cols-sm-2 control-label">Your Name</label>
+                        <label for="name" class="cols-sm-2 control-label">Your First Name</label>
                         <div class="cols-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
-                                <input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" />
+                                <asp:TextBox ID="firstname" runat="server" CssClass="form-control" placeholder="Enter your First Name"></asp:TextBox>
                             </div>
                         </div>
+                        <asp:Literal ID="EroarePrenume" runat="server"></asp:Literal>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name" class="cols-sm-2 control-label">Your Last Name</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
+                                <asp:TextBox ID="name" runat="server" CssClass="form-control" placeholder="Enter your Last Name"></asp:TextBox>
+                            </div>
+                        </div>
+                        <asp:Literal ID="EroareNume" runat="server"></asp:Literal>
                     </div>
 
                     <div class="form-group">
@@ -94,9 +107,10 @@
                         <div class="cols-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-briefcase" aria-hidden="true"></i></span>
-                                <input type="text" class="form-control" name="email" id="email" placeholder="Enter your Email" />
+                                <asp:TextBox ID="email" CssClass="form-control" placeholder="Enter your Email" runat="server"></asp:TextBox>
                             </div>
                         </div>
+                        <asp:Literal ID="EroareEmail" runat="server"></asp:Literal>
                     </div>
 
                     <div class="form-group">
@@ -104,9 +118,10 @@
                         <div class="cols-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-certificate" aria-hidden="true"></i></span>
-                                <input type="text" class="form-control" name="username" id="username" placeholder="Enter your Username" />
+                                <asp:TextBox ID="username" placeholder="Enter your Username" CssClass="form-control" runat="server"></asp:TextBox>
                             </div>
                         </div>
+                        <asp:Literal ID="EroareUsername" runat="server"></asp:Literal>
                     </div>
 
                     <div class="form-group">
@@ -114,9 +129,10 @@
                         <div class="cols-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock" aria-hidden="true"></i></span>
-                                <input type="password" class="form-control" name="password" id="password" placeholder="Enter your Password" />
+                                <asp:TextBox ID="password" CssClass="form-control" placeholder="Enter your Password" runat="server" TextMode="Password"></asp:TextBox>
                             </div>
                         </div>
+                        <asp:Literal ID="EroareParola" runat="server"></asp:Literal>
                     </div>
 
                     <div class="form-group">
@@ -124,16 +140,18 @@
                         <div class="cols-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock" aria-hidden="true"></i></span>
-                                <input type="password" class="form-control" name="confirm" id="confirm" placeholder="Confirm your Password" />
+                                <asp:TextBox ID="passwordcon" CssClass="form-control" placeholder="Confirm your Password" runat="server" TextMode="Password"></asp:TextBox>
                             </div>
                         </div>
+                        <asp:Literal ID="EroareConfirmareParola" runat="server"></asp:Literal>
                     </div>
 
                     <div class="form-group ">
-                        <button type="button" class="btn btn-primary btn-lg btn-block login-button">Register</button>
+                        <asp:Button ID="registerButton" CssClass="btn btn-primary btn-lg btn-block login-button" runat="server" Text="Register" OnClick="registerButton_Click" />
+                        
                     </div>
                     <div class="login-register">
-                        <a href="index.php">Login</a>
+                        <a href="Index.aspx">Login</a>
                     </div>
                 </div>
             </div>
