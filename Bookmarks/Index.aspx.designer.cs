@@ -40,6 +40,15 @@ namespace Bookmarks {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl TBL3;
         
         /// <summary>
+        /// TBL4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl TBL4;
+        
+        /// <summary>
         /// TBR1 control.
         /// </summary>
         /// <remarks>

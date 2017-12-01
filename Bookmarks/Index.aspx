@@ -223,6 +223,7 @@
 
 
     <div class="col-md-3">
+        <h4 class="product clearfix">Last Posted</h4>
         <ul class="widget-products">
             <li>
                 <a href="#">
@@ -270,9 +271,9 @@
                         <img class="img-thumbnail" src="#" alt="" />
                     </span>
                     <span class="product clearfix">
-                        <span runat="server" class="name">Product name 4
+                        <span id="TBL4" runat="server" class="name">Product name 4
                      </span>
-                        <span class="price" id="TBL4">
+                        <span runat="server" class="price" >
                             <i class="fa fa-money"></i>
                         </span>
                     </span>
@@ -282,6 +283,7 @@
     </div>
 
     <div class="col-md-3" style="float:right">
+         <h4 class="product clearfix">Most Voted</h4>
         <ul class="widget-products">
             <li>
                 <a href="#">

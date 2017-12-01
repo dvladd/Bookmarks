@@ -78,6 +78,8 @@ namespace Bookmarks
                     string query = "INSERT INTO Users(firstName, lastName, email, registerDate, userName, passWord) OUTPUT INSERTED.userId "
                    + " VALUES (@firstname, @lastname, @email, @registerDate, @userName, @passWord)";
                     DateTime _localDate = DateTime.Now;
+                    //Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Asus\source\repos\Bookmarks\Bookmarks\App_Data\Database.mdf;Integrated Security=True
+                    //Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Vlad\Source\Repos\Bookmarks\Bookmarks\App_Data\Database.mdf; Integrated Security = True
                     SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Vlad\Source\Repos\Bookmarks\Bookmarks\App_Data\Database.mdf; Integrated Security = True");
 
                     try
