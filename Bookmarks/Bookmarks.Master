@@ -1,3 +1,21 @@
+﻿Skip to content
+This repository
+Search
+Pull requests
+Issues
+Marketplace
+Explore
+ @catalin209
+ Sign out
+ Watch 1
+  Star 0  Fork 0 dvladd/Bookmarks
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights
+Branch: master Find file Copy pathBookmarks/Bookmarks/Bookmarks.Master
+a57e0e9  3 days ago
+@dvladd dvladd Register works
+2 contributors @catalin209 @dvladd
+RawBlameHistory     
+103 lines (83 sloc)  5.19 KB
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Bookmarks.master.cs" Inherits="Bookmarks.Bookmarks" %>
 
 <!DOCTYPE html>
@@ -78,21 +96,22 @@
                         <div id="signin" class="navbar-form navbar-right" role="form">
                             <div class="input-group" style="margin-right: 10px; margin-bottom: 5px;">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input id="email" type="email" class="form-control" name="email" value="" placeholder="Email Address" />
+                                <input runat="server" id="email" type="email" class="form-control" name="email" value="" placeholder="Email Address" />
                             </div>
 
                             <div class="input-group" style="margin-right: 10px; margin-bottom: 5px;">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                <input id="password" type="password" class="form-control" name="password" value="" placeholder="Password" />
+                                <input runat="server" id="password" type="password" class="form-control" name="password" value="" placeholder="Password" />
                             </div>
 
-                            <button type="submit" class="btn btn-primary" style="margin-bottom: 5px;">Login</button>
+                            <asp:Button runat="server"  class="btn btn-primary" style="margin-bottom: 5px;" Text="LogIn" OnClick="OnLogInClock"/>
                             <asp:Button runat="server" CssClass="btn btn-primary" Style="margin-bottom: 5px;" Text="Register" OnClick="Register_Click"></asp:Button>
                         </div>
 
                     </div>
                 </div>
             </nav>
+
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
 
             </asp:ContentPlaceHolder>

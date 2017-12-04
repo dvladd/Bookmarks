@@ -71,8 +71,10 @@
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
     <Content Include="Index.aspx" />
+    <Content Include="MainMenu.aspx" />
     <Content Include="packages.config" />
     <Content Include="Bookmarks.Master" />
+    <Content Include="BookmarksMainMenu.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -92,12 +94,26 @@
     <Compile Include="Bookmarks.Master.designer.cs">
       <DependentUpon>Bookmarks.Master</DependentUpon>
     </Compile>
+    <Compile Include="BookmarksMainMenu.Master.cs">
+      <DependentUpon>BookmarksMainMenu.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BookmarksMainMenu.Master.designer.cs">
+      <DependentUpon>BookmarksMainMenu.Master</DependentUpon>
+    </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.aspx.cs">
+      <DependentUpon>MainMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainMenu.aspx.designer.cs">
+      <DependentUpon>MainMenu.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">

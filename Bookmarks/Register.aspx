@@ -77,8 +77,8 @@
                 </div>ss
             </div>--%>
             <div class="main-login main-center">
-            <asp:Literal ID="EroareBazaDate" runat="server"></asp:Literal>
-                <div class="form-horizontal" >
+                <asp:Literal ID="EroareBazaDate" runat="server"></asp:Literal>
+                <div class="form-horizontal">
 
                     <div class="form-group">
                         <label for="name" class="cols-sm-2 control-label">Your First Name</label>
@@ -148,7 +148,7 @@
 
                     <div class="form-group ">
                         <asp:Button ID="registerButton" CssClass="btn btn-primary btn-lg btn-block login-button" runat="server" Text="Register" OnClick="registerButton_Click" />
-                        
+
                     </div>
                     <div class="login-register">
                         <a href="Index.aspx">Login</a>
