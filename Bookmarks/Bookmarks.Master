@@ -1,21 +1,3 @@
-﻿Skip to content
-This repository
-Search
-Pull requests
-Issues
-Marketplace
-Explore
- @catalin209
- Sign out
- Watch 1
-  Star 0  Fork 0 dvladd/Bookmarks
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights
-Branch: master Find file Copy pathBookmarks/Bookmarks/Bookmarks.Master
-a57e0e9  3 days ago
-@dvladd dvladd Register works
-2 contributors @catalin209 @dvladd
-RawBlameHistory     
-103 lines (83 sloc)  5.19 KB
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Bookmarks.master.cs" Inherits="Bookmarks.Bookmarks" %>
 
 <!DOCTYPE html>
@@ -31,7 +13,6 @@ RawBlameHistory
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
 </head>
 
 <body>
@@ -104,7 +85,7 @@ RawBlameHistory
                                 <input runat="server" id="password" type="password" class="form-control" name="password" value="" placeholder="Password" />
                             </div>
 
-                            <asp:Button runat="server"  class="btn btn-primary" style="margin-bottom: 5px;" Text="LogIn" OnClick="OnLogInClock"/>
+                            <asp:Button runat="server" class="btn btn-primary" Style="margin-bottom: 5px;" Text="LogIn" OnClick="OnLogInClock" />
                             <asp:Button runat="server" CssClass="btn btn-primary" Style="margin-bottom: 5px;" Text="Register" OnClick="Register_Click"></asp:Button>
                         </div>
 
@@ -113,7 +94,6 @@ RawBlameHistory
             </nav>
 
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-
             </asp:ContentPlaceHolder>
         </div>
     </form>

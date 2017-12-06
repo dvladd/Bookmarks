@@ -40,6 +40,7 @@ namespace Bookmarks
             {
 
             }
+            //Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Vlad\Source\Repos\Bookmarks\Bookmarks\App_Data\Database.mdf; Integrated Security = True
             SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Asus\\source\\repos\\Bookmarks\\Bookmarks\\App_Data\\Database.mdf;Integrated Security=True");
             try
             {
@@ -50,7 +51,7 @@ namespace Bookmarks
                 //com.Parameters.AddWithValue("lastname", _Name);
 
 
-              //  SqlDataReader reader = com.ExecuteReader();
+                //  SqlDataReader reader = com.ExecuteReader();
                 int id = (int)com.ExecuteScalar();
 
                 if (com.ExecuteScalar() != null)
@@ -59,7 +60,7 @@ namespace Bookmarks
             }
             catch (Exception ex)
             {
-                
+
             }
             finally
             {

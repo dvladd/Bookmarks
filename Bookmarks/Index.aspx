@@ -171,7 +171,7 @@
             overflow: hidden;
             border-radius: 50%;
         }
-  
+
         .widget-users {
             list-style: none;
             margin: 0;
@@ -228,12 +228,12 @@
             <li>
                 <a href="#">
                     <span class="img">
-                        <img class="img-thumbnail" src="#"  alt="" />
+                        <img class="img-thumbnail" src="#" alt="" />
                     </span>
                     <span class="product clearfix">
-                        <span runat="server" class="name" id="TBL1" >Product name 1
-                     </span>
-                       
+                        <span runat="server" class="name" id="TBL1">Product name 1
+                        </span>
+
                     </span>
                 </a>
             </li>
@@ -243,8 +243,8 @@
                         <img class="img-thumbnail" src="#" alt="" />
                     </span>
                     <span class="product clearfix">
-                        <span  runat="server" class="name" id="TBL2">Product name 2
-                     </span>
+                        <span runat="server" class="name" id="TBL2">Product name 2
+                        </span>
                         <span class="price">
                             <i class="fa fa-money"></i>
                         </span>
@@ -258,7 +258,7 @@
                     </span>
                     <span class="product clearfix">
                         <span runat="server" class="name" id="TBL3">Product name 3
-                     </span>
+                        </span>
                         <span class="price">
                             <i class="fa fa-money"></i>
                         </span>
@@ -272,8 +272,8 @@
                     </span>
                     <span class="product clearfix">
                         <span id="TBL4" runat="server" class="name">Product name 4
-                     </span>
-                        <span runat="server" class="price" >
+                        </span>
+                        <span runat="server" class="price">
                             <i class="fa fa-money"></i>
                         </span>
                     </span>
@@ -282,8 +282,8 @@
         </ul>
     </div>
 
-    <div class="col-md-3" style="float:right">
-         <h4 class="product clearfix">Most Voted</h4>
+    <div class="col-md-3" style="float: right">
+        <h4 class="product clearfix">Most Voted</h4>
         <ul class="widget-products">
             <li>
                 <a href="#">
@@ -292,7 +292,7 @@
                     </span>
                     <span class="product clearfix">
                         <span runat="server" class="name" id="TBR1">Product name 1
-                     </span>
+                        </span>
                         <span class="price">
                             <i class="fa fa-money"></i>
                         </span>
@@ -306,7 +306,7 @@
                     </span>
                     <span class="product clearfix">
                         <span runat="server" class="name" id="TBR2">Product name 2
-                     </span>
+                        </span>
                         <span class="price">
                             <i class="fa fa-money"></i>
                         </span>
@@ -320,7 +320,7 @@
                     </span>
                     <span runat="server" class="product clearfix">
                         <span runat="server" class="name" id="TBR3">Product name 3
-                     </span>
+                        </span>
                         <span class="price">
                             <i class="fa fa-money"></i>
                         </span>
@@ -334,7 +334,7 @@
                     </span>
                     <span runat="server" class="product clearfix">
                         <span runat="server" class="name" id="TBR4">Product name 4
-                     </span>
+                        </span>
                         <span class="price">
                             <i class="fa fa-money"></i>
                         </span>

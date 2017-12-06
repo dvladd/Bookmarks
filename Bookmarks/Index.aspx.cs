@@ -14,7 +14,7 @@ namespace Bookmarks
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            MostVotedBooksAndLatestBooksAdd("timesClicked","MostViewd");
+            MostVotedBooksAndLatestBooksAdd("timesClicked", "MostViewd");
             MostVotedBooksAndLatestBooksAdd("addedTime", "Latest");
             // LatestBooksAdd();
 
@@ -23,10 +23,10 @@ namespace Bookmarks
 
         private void LatestBooksAdd()
         {
-            
+
         }
 
-        private  void MostVotedBooksAndLatestBooksAdd(string column,string choise)
+        private void MostVotedBooksAndLatestBooksAdd(string column, string choise)
         {
             try
             {
@@ -36,7 +36,7 @@ namespace Bookmarks
                 //Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Vlad\Source\Repos\Bookmarks\Bookmarks\App_Data\Database.mdf; Integrated Security = True
                 using (SqlConnection connection = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Asus\\source\\repos\\Bookmarks\\Bookmarks\\App_Data\\Database.mdf;Integrated Security=True"))
                 {
-                    SqlCommand command = new SqlCommand("Select *  from Bookmarks b inner join Users u on b.userId = u.userId ORDER BY  " + column +  "  DESC", connection);
+                    SqlCommand command = new SqlCommand("Select *  from Bookmarks b inner join Users u on b.userId = u.userId ORDER BY  " + column + "  DESC", connection);
                     connection.Open();
                     SqlDataReader reader = command.ExecuteReader();
 
@@ -45,7 +45,7 @@ namespace Bookmarks
                         topPopularList.Add(reader["firstName"].ToString());
                         nr++;
                     }
-                    if (topPopularList.Count == 4 && choise=="MostViewd")
+                    if (topPopularList.Count == 4 && choise == "MostViewd")
                     {
                         TBR1.InnerHtml = topPopularList[0];
                         TBR2.InnerHtml = topPopularList[1];
@@ -59,12 +59,12 @@ namespace Bookmarks
                         TBL3.InnerHtml = topPopularList[2];
                         TBL4.InnerHtml = topPopularList[3];
                     }
-                        reader.Close();
+                    reader.Close();
                 }
             }
             catch (Exception ex)
             {
-                
+
             }
         }
     }

@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Bookmarks {
-    
-    
-    public partial class Index {
-        
+namespace Bookmarks
+{
+
+
+    public partial class Index
+    {
+
         /// <summary>
         /// TBL1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace Bookmarks {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl TBL1;
-        
+
         /// <summary>
         /// TBL2 control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace Bookmarks {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl TBL2;
-        
+
         /// <summary>
         /// TBL3 control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace Bookmarks {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl TBL3;
-        
+
         /// <summary>
         /// TBL4 control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace Bookmarks {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl TBL4;
-        
+
         /// <summary>
         /// TBR1 control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace Bookmarks {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl TBR1;
-        
+
         /// <summary>
         /// TBR2 control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace Bookmarks {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl TBR2;
-        
+
         /// <summary>
         /// TBR3 control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace Bookmarks {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl TBR3;
-        
+
         /// <summary>
         /// TBR4 control.
         /// </summary>
