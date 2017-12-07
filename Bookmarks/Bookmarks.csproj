@@ -66,6 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddBookmark.aspx" />
     <Content Include="App_Data\Database.mdf" />
     <Content Include="App_Data\Database_log.ldf">
       <DependentUpon>Database.mdf</DependentUpon>
@@ -87,6 +88,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddBookmark.aspx.cs">
+      <DependentUpon>AddBookmark.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddBookmark.aspx.designer.cs">
+      <DependentUpon>AddBookmark.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Bookmarks.Master.cs">
       <DependentUpon>Bookmarks.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
