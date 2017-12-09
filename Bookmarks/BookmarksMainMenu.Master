@@ -42,7 +42,7 @@
                                 <li><a href="#">bookmarkssite@gmail.com</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Add bookmark</a></li>
+                        <li><a href="AddBookmark.aspx">Add bookmark</a></li>
                         <li>
 
                             <div id="SearchDiv" class="navbar-form navbar-right" role="form">

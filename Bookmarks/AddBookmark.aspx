@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/BookmarksMainMenu.Master" AutoEventWireup="true" CodeBehind="AddBookmark.aspx.cs" Inherits="Bookmarks.AddBookmark" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -13,6 +14,11 @@
 
         .main {
             margin-top: 0px;
+        }
+
+        .allingPhoto {
+            margin-top: 5px;
+            margin-left: 10px;
         }
 
         h1.title {
@@ -71,16 +77,16 @@
     <div class="container">
         <div class="row main">
             <div class="main-login main-center">
-                <asp:Literal ID="EroareBazaDate" runat="server"></asp:Literal>
                 <div class="form-horizontal">
-
                     <div class="form-group">
+                        <asp:Literal ID="EroareBazaDate" runat="server"></asp:Literal>
                         <label for="name" class="cols-sm-2">Who should see this bookmark?</label>
                         <asp:RadioButtonList ID="RadioButtonList1" runat="server" RepeatDirection="Horizontal">
-                            <asp:ListItem Text="Public &nbsp;&nbsp;" Value="public" Selected="True" /> 
-                            <asp:ListItem Text="Private &nbsp;&nbsp;" Value="private" /> 
-                            <asp:ListItem Text="Both" Value="both" /> 
+                            <asp:ListItem Text="Private &nbsp;&nbsp;" Value="private" />
+                            <asp:ListItem Text="Public &nbsp;&nbsp;" Value="public" />
+                            <asp:ListItem Text="Both" Value="both" />
                         </asp:RadioButtonList>
+                        <asp:Label ID="EroareRadio" runat="server" Text=""></asp:Label>
                     </div>
 
                     <div class="form-group">
@@ -110,7 +116,7 @@
                         <div class="cols-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-question-sign" aria-hidden="true"></i></span>
-                                <asp:TextBox ID="description" style="height:200px;" placeholder="Enter bookmark's description" CssClass="form-control" runat="server" TextMode="MultiLine"></asp:TextBox>
+                                <asp:TextBox ID="description" Style="height: 200px;" placeholder="Enter bookmark's description" CssClass="form-control" runat="server" TextMode="MultiLine"></asp:TextBox>
                             </div>
                         </div>
                         <asp:Literal ID="EroareDescriere" runat="server"></asp:Literal>
@@ -121,15 +127,37 @@
                         <div class="cols-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-tags" aria-hidden="true"></i></span>
-                                <asp:TextBox ID="tags" placeholder="Enter bookmark's tags" CssClass="form-control" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="tags" placeholder="Enter bookmark's tags (separated by space)" CssClass="form-control" runat="server"></asp:TextBox>
                             </div>
                         </div>
                         <asp:Literal ID="EroareTags" runat="server"></asp:Literal>
                     </div>
 
-                    <div class="form-group ">
-                        <asp:Button ID="addBookmarkButton" CssClass="btn btn-primary btn-lg btn-block login-button" runat="server" Text="Add Bookmark"/>
+                    <div class="form-group">
+                        <label for="category" class="cols-sm-2 control-label">Bookmark's Category</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-th" aria-hidden="true"></i></span>
+                                <asp:TextBox ID="category" placeholder="Enter bookmark's category" CssClass="form-control" runat="server"></asp:TextBox>
+                            </div>
+                        </div>
+                        <asp:Literal ID="EroareCategorie" runat="server"></asp:Literal>
+                    </div>
 
+                    <div class="form-group">
+                        <label for="photo" class="cols-sm-2 control-label">Bookmark's Thumbnail</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-picture" aria-hidden="true"></i></span>
+                                <asp:FileUpload ID="photoUpload" runat="server" CssClass="allingPhoto" />
+                            </div>
+                        </div>
+                        <asp:Literal ID="Literal1" runat="server"></asp:Literal>
+                    </div>
+
+                    <div class="form-group ">
+                        <asp:Button ID="addBookmarkButton" CssClass="btn btn-primary btn-lg btn-block login-button" runat="server" Text="Add Bookmark" OnClick="addBookmarkButton_Click" />
+                        <%--https://www.w3schools.com/icons/bootstrap_icons_glyphicons.asp--%>
                     </div>
                 </div>
             </div>

@@ -11,7 +11,8 @@ namespace Bookmarks
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            NumeUser.InnerHtml = "Welcome back, " + (string)(Session["currentName"] + " (" + (string)(Session["currentUserName"]) + ")");
+            NumeUser.InnerHtml = "Welcome back, " + (string)(Session["currentName"])
+                + " (" + (string)(Session["currentUserName"] + ")");
         }
     }
 }

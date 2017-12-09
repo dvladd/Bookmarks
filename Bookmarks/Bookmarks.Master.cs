@@ -52,17 +52,21 @@ namespace Bookmarks
                 //com.Parameters.AddWithValue("lastname", _Name);
                 string currentName = "";
                 string currentUserName = "";
+                int currentUserId = -1;
                 using (SqlDataReader myReader = com.ExecuteReader())
                 {
                     while(myReader.Read())
                     {
                         currentName = myReader["firstName"].ToString();
                         currentUserName = myReader["userName"].ToString();
+                        currentUserId = (int)myReader["userId"];
                     }
                 }
 
                 Session["currentName"] = currentName;
                 Session["currentUserName"] = currentUserName;
+                Session["currentUserId"] = currentUserId;
+
 
                     //  SqlDataReader reader = com.ExecuteReader();
                     int id = (int)com.ExecuteScalar();
