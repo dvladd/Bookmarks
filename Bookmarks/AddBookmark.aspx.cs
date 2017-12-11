@@ -130,7 +130,7 @@ namespace Bookmarks
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Image1.ImageUrl = "data:image/jpg;base64," + Convert.ToBase64String((byte[])Session["imagetest"]);
+            //Image1.ImageUrl = "data:image/jpg;base64," + Convert.ToBase64String((byte[])Session["imagetest"]);
         }
     }
 }

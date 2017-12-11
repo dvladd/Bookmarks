@@ -216,13 +216,19 @@
             -moz-border-radius: 3px;
             border-radius: 3px;
         }
+        .dd{
+            margin-top:20px;
+            margin-top:20px;
+            height:50%;
+           
+        }
     </style>
 
 
 
 
 
-    <div class="col-md-3">
+      <div class="col-md-3" style="border-color:#337ab7;border-style:double">
         <h4 class="product clearfix">Last Posted</h4>
         <ul class="widget-products">
             <li>
@@ -282,7 +288,7 @@
         </ul>
     </div>
 
-    <div class="col-md-3" style="float: right">
+    <div class="col-md-3" style="float: left;border-color:#337ab7;border-style:double">
         <h4 class="product clearfix">Most Voted</h4>
         <ul class="widget-products">
             <li>
@@ -342,5 +348,10 @@
                 </a>
             </li>
         </ul>
+    </div>
+
+    <div class="container" id="tourpackages-carousel">
+        <div class="row" id="roww" runat="server">
+        </div>
     </div>
 </asp:Content>
