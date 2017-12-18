@@ -71,6 +71,7 @@
     <Content Include="App_Data\Database_log.ldf">
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <Content Include="ChangePassword.aspx" />
     <Content Include="Index.aspx" />
     <Content Include="MainMenu.aspx" />
     <Content Include="packages.config" />
@@ -86,6 +87,7 @@
   <ItemGroup>
     <Content Include="PersonalBookmarks.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="SearchElements.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -109,6 +111,13 @@
     </Compile>
     <Compile Include="BookmarksMainMenu.Master.designer.cs">
       <DependentUpon>BookmarksMainMenu.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
@@ -138,6 +147,13 @@
     </Compile>
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchElements.aspx.cs">
+      <DependentUpon>SearchElements.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchElements.aspx.designer.cs">
+      <DependentUpon>SearchElements.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <PropertyGroup>

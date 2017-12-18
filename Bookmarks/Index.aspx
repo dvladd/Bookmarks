@@ -227,8 +227,8 @@
 
 
 
-
-      <div class="col-md-3" style="border-color:#337ab7;border-style:double">
+    <div class="row">
+         <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6" style="border-color:#337ab7;border-style:double">
         <h4 class="product clearfix">Last Posted</h4>
         <ul class="widget-products">
             <li>
@@ -288,7 +288,7 @@
         </ul>
     </div>
 
-    <div class="col-md-3" style="float: left;border-color:#337ab7;border-style:double">
+    <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6" style="border-color:#337ab7;border-style:double">
         <h4 class="product clearfix">Most Voted</h4>
         <ul class="widget-products">
             <li>
@@ -350,7 +350,10 @@
         </ul>
     </div>
 
-    <div class="container" id="tourpackages-carousel">
+    </div>
+     
+
+    <div class="container" id="tourpackages-carousel" style="margin-top:50px">
         <div class="row" id="roww" runat="server">
         </div>
     </div>

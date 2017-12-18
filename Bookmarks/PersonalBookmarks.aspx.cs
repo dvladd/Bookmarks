@@ -13,13 +13,13 @@ namespace Bookmarks
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Vlad\Source\Repos\Bookmarks\Bookmarks\App_Data\Database.mdf; Integrated Security = True");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Asus\Desktop\DatabaseForProject\Database.mdf;Integrated Security=True");
             try
             {
                 con.Open();
-                string query = "SELECT * FROM Bookmarks";
+                string query = "SELECT * FROM Bookmarks where userId = @id ";
                 SqlCommand com = new SqlCommand(query, con);
-
+                com.Parameters.AddWithValue("id", (int)Session["currentUserId"]);
                 string currentTitle = "";
                 string currenDescription = "";
                 string currentLink = "";

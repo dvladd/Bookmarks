@@ -16,7 +16,7 @@ namespace Bookmarks
 
             MostVotedBooksAndLatestBooksAdd("timesClicked", "MostViewd");
             MostVotedBooksAndLatestBooksAdd("addedTime", "Latest");
-            SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Vlad\Source\Repos\Bookmarks\Bookmarks\App_Data\Database.mdf; Integrated Security = True");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Asus\Desktop\DatabaseForProject\Database.mdf;Integrated Security=True");
             try
             {
                 con.Open();
@@ -59,7 +59,7 @@ namespace Bookmarks
                     
                         //       this.Controls.Add(div1);
                         roww1.Controls.Add(div1);
-
+                        
                         //currentUserId = (int)myReader["userId"];
                     }
                 }
@@ -79,7 +79,7 @@ namespace Bookmarks
                 List<string> topPopularList = new List<string>();
                 // Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\Asus\\source\\repos\\Bookmarks\\Bookmarks\\App_Data\\Database.mdf; Integrated Security = True
                 //Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Vlad\Source\Repos\Bookmarks\Bookmarks\App_Data\Database.mdf; Integrated Security = True
-                using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Vlad\Source\Repos\Bookmarks\Bookmarks\App_Data\Database.mdf;Integrated Security=True"))
+                using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Asus\Desktop\DatabaseForProject\Database.mdf;Integrated Security=True"))
                 {
                     SqlCommand command = new SqlCommand("Select *  from Bookmarks b inner join Users u on b.userId = u.userId ORDER BY  " + column + "  DESC", connection);
                     connection.Open();

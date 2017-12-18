@@ -13,6 +13,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .wh {
+            width: 342px;
+            margin-left: 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -39,24 +45,57 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contact us <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Send feedback</a></li>
-                                <li><a href="#">See Facebook page</a></li>
-                                <li class="divider"></li>
-                                <li><a> Feel free to contact us at <span class="caret"></span> </a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">bookmarkssite@gmail.com</a></li>
+                                    <li><a href="#">Send feedback</a></li>
+                                    <li><a href="#">See Facebook page</a></li>
+                                    <li class="divider"></li>
+                                    <li><a>Feel free to contact us at <span class="caret"></span></a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">bookmarkssite@gmail.com</a></li>
                                 </ul>
                             </li>
                             <li>
 
                                 <div id="SearchDiv" class="navbar-form navbar-right" role="form">
                                     <div class="input-group" style="margin-right: 10px; margin-bottom: 5px;">
-                                        <input id="Search" type="search" class="form-control" name="search" value="" placeholder="Search Bookmarks..." />
+                                        <asp:Button runat="server" id="searchButton" CssClass="form-control"   />
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
-
                                     </div>
                                 </div>
                             </li>
+                            <li class="dropdown">
+
+
+
+                                <a href="#" class="dropdown-toggle" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif" data-toggle="dropdown" role="button" aria-expanded="false">Filters <span class="caret"></span></a>
+
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Title</a></li>
+                                    <li>
+                                        <asp:TextBox runat="server" CssClass="form-control wh" ID="titleTextboxFilter"></asp:TextBox></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Tags</a></li>
+                                    <li>
+                                        <asp:TextBox runat="server" CssClass="form-control wh" ID="tagsTextboxFilter"></asp:TextBox></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Description</a></li>
+                                    <li>
+                                        <asp:TextBox runat="server" CssClass="form-control wh" ID="descriptionTextboxFilter"></asp:TextBox></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Sort by </a></li>
+                                    <li style="margin-left: 10px">
+                                        <asp:Label runat="server" CssClass="checkbox-inline">
+                                            <asp:CheckBox runat="server" Text="Text" ID="ckBoxTitle" /></asp:Label>
+                                        <asp:Label runat="server" CssClass="checkbox-inline">
+                                            <asp:CheckBox runat="server" Text="Tags" ID="ckBoxTag" /></asp:Label>
+                                        <asp:Label runat="server" CssClass="checkbox-inline">
+                                            <asp:CheckBox runat="server" Text="Descriere" ID="ckBoxDescription" /></asp:Label>
+
+
+
+                                    </li>
+                                </ul>
+                            </li>
+
 
                         </ul>
 

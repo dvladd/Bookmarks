@@ -12,7 +12,7 @@ namespace Bookmarks
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void Register_Click(object sender, EventArgs e)
@@ -21,27 +21,9 @@ namespace Bookmarks
         }
 
         protected void OnLogInClock(object sender, EventArgs e)
-        {
-            try
-            {
-                int nr = 0;
-                List<string> topPopularList = new List<string>();
-                // Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\Asus\\source\\repos\\Bookmarks\\Bookmarks\\App_Data\\Database.mdf; Integrated Security = True
-                //Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Vlad\Source\Repos\Bookmarks\Bookmarks\App_Data\Database.mdf; Integrated Security = True
-                using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Vlad\Source\Repos\Bookmarks\Bookmarks\App_Data\Database.mdf;Integrated Security=True"))
-                {
-                    SqlCommand command = new SqlCommand("Select *  from Bookmarks ");
-                    connection.Open();
-                    SqlDataReader reader = command.ExecuteReader();
-                    reader.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-
-            }
-            //Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Vlad\Source\Repos\Bookmarks\Bookmarks\App_Data\Database.mdf; Integrated Security = True
-            SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Vlad\Source\Repos\Bookmarks\Bookmarks\App_Data\Database.mdf; Integrated Security = True");
+        {         
+           //Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Vlad\Source\Repos\Bookmarks\Bookmarks\App_Data\Database.mdf; Integrated Security = True
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Asus\Desktop\DatabaseForProject\Database.mdf;Integrated Security=True");
             try
             {
                 con.Open();
@@ -85,6 +67,11 @@ namespace Bookmarks
             {
                 con.Close();
             }
+        }
+
+        protected void searchButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
