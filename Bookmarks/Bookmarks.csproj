@@ -71,6 +71,7 @@
     <Content Include="App_Data\Database_log.ldf">
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <Content Include="EditProfile.aspx" />
     <Content Include="Index.aspx" />
     <Content Include="MainMenu.aspx" />
     <Content Include="packages.config" />
@@ -109,6 +110,13 @@
     </Compile>
     <Compile Include="BookmarksMainMenu.Master.designer.cs">
       <DependentUpon>BookmarksMainMenu.Master</DependentUpon>
+    </Compile>
+    <Compile Include="EditProfile.aspx.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditProfile.aspx.designer.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
