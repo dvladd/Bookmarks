@@ -10,8 +10,19 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <style>
+        .wh {
+            margin-left: 10px;
+            width: 342px;
+        }
+        .mgt{
+            margin-top:10px;
+        }
+    </style>
 </head>
 <body>
+
+    <form id="form1" runat="server">
     <div>
         <nav class="navbar navbar-default">
             <div class="container-fluid">
@@ -36,7 +47,7 @@
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="#">See Facebook page</a></li>
                                 <li class="divider"></li>
-                                <li><a> Feel free to contact us at: </a></li>
+                                    <li><a>Feel free to contact us at: </a></li>
                                 <li class="divider"></li>
                                 <li><a href="#">bookmarkssite@gmail.com</a></li>
                             </ul>
@@ -45,13 +56,58 @@
                         <li>
 
                             <div id="SearchDiv" class="navbar-form navbar-right" role="form">
-                                <div class="input-group" style="margin-right: 10px; margin-bottom: 5px;">
-                                    <input id="Search" type="email" class="form-control" name="email" value="" placeholder="Search Bookmarks..." />
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
-
+                                    <div class="input-group form-inline" style="margin-right: 10px; margin-bottom: 5px;">
+                                        <asp:TextBox runat="server" ID="searchTextbox" CssClass="form-control" />
+                                        <%--<asp:Button runat="server"  CssClass="btn btn-primary"/>--%>
                                 </div>
                             </div>
                         </li>
+
+                           <li>
+                           <asp:Button runat="server" ID="searchButton" CssClass="btn btn-primary mgt" Text="Search" OnClick="searchButton_Click" />
+                           </li>
+                            <li class="dropdown" style="margin-left:10px">
+
+
+
+                                <a href="#" class="dropdown-toggle" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif" data-toggle="dropdown" role="button" aria-expanded="false">Filters <span class="caret"></span></a>
+
+                                <ul class="dropdown-menu" role="menu" style="width:300px" >
+                                    <%--                            <li><a href="#" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Title</a></li>
+                                    <li>
+                                        <asp:TextBox runat="server" CssClass="form-control wh" ID="titleTextboxFilter"></asp:TextBox></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Tags</a></li>
+                                    <li>
+                                        <asp:TextBox runat="server" CssClass="form-control wh" ID="tagsTextboxFilter"></asp:TextBox></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Description</a></li>
+                                    <li>
+                                        <asp:TextBox runat="server" CssClass="form-control wh" ID="descriptionTextboxFilter"></asp:TextBox></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Sort by </a></li>--%>
+                                                                       <li><a href="#" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Search by</a></li>
+                                     <li style="margin-left: 10px">
+                                        <asp:Label runat="server" CssClass="checkbox-inline">
+                                            <asp:RadioButton runat="server" Text="Title" ID="radioButtonTitle" GroupName="searchGroup"  /></asp:Label>
+                                        <asp:Label runat="server" CssClass="checkbox-inline">
+                                            <asp:RadioButton runat="server" Text="Tags" ID="radioButtonTags"  GroupName="searchGroup" /></asp:Label>
+                                        <asp:Label runat="server" CssClass="checkbox-inline">
+                                            <asp:RadioButton runat="server" Text="Descriere" ID="radioButtonDescription"  GroupName="searchGroup" /></asp:Label>
+                                    </li>
+
+                                    <li><a href="#" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Sort by </a></li>
+                                    <li style="margin-left: 30px">
+                                        <asp:Label runat="server" CssClass="checkbox-inline">
+                                            <asp:CheckBox runat="server" Text="Title" ID="ckBoxTitleSort"  /></asp:Label>
+                                        <asp:Label runat="server" CssClass="checkbox-inline">
+                                            <asp:CheckBox runat="server" Text="Tags" ID="ckBoxTagSort" /></asp:Label>
+                                        <asp:Label runat="server" CssClass="checkbox-inline">
+                                            <asp:CheckBox runat="server" Text="Descriere" ID="ckBoxDescriptionSort" /></asp:Label>
+                                    </li>
+                                </ul>
+                            </li>
+
 
                     </ul>
 
@@ -62,9 +118,9 @@
                                 <li><a href="PersonalBookmarks.aspx">View your bookmarks</a></li>
                                 <li><a href="EditProfile.aspx">Edit your profile</a></li>
                                 <li class="divider"></li>
-                                <li><a href="#">Change password</a></li>
+                                    <li><a href="ChangePassword.aspx">Change password</a></li>
                                 <li class="divider"></li>
-                                <li><a href="#">Logout</a></li>
+                                    <li><a href="Index.aspx">Logout</a></li>
                             </ul>
                         </li>
                     </div>
@@ -75,9 +131,9 @@
         </asp:ContentPlaceHolder>
     </div>
 
-    <form id="form1" runat="server">
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
             </asp:ContentPlaceHolder>
         </div>
     </form>

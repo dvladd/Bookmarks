@@ -36,6 +36,7 @@ namespace Bookmarks
                 String _Description = description.Text;
                 String _Tags = tags.Text;
                 String _Category = category.Text;
+                String _likes = category.Text;
                 byte[] _Sir = null;
                 int _userId = (int)Session["currentUserId"];
                 if(photoUpload.HasFile == true)
@@ -83,11 +84,11 @@ namespace Bookmarks
 
                 if(valid)
                 {
-                    string query = "INSERT INTO Bookmarks(visibility, userId, title, link, description, tags, addedDate, timesClicked, addedTime, picture, category) OUTPUT INSERTED.bookmarkId "
-                     + "VALUES (@visibility, @userId, @title, @link, @description, @tags, @addedDate, @timesClicked, @addedTime, @picture, @category)";
+                    string query = "INSERT INTO Bookmarks(visibility, userId, title, link, description, tags, addedDate, timesClicked, addedTime, picture, category, numberOfLikes) OUTPUT INSERTED.bookmarkId "
+                     + "VALUES (@visibility, @userId, @title, @link, @description, @tags, @addedDate, @timesClicked, @addedTime, @picture, @category , @likes)";
                     DateTime _localDate = DateTime.Now.Date;
                     TimeSpan _localTime = DateTime.Now.TimeOfDay;
-                    SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Vlad\Source\Repos\Bookmarks\Bookmarks\App_Data\Database.mdf;Integrated Security=True");
+                    SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Asus\Desktop\DatabaseForProject\Database.mdf;Integrated Security=True");
                     try
                     {
                         con.Open();
@@ -104,6 +105,7 @@ namespace Bookmarks
                         com.Parameters.AddWithValue("picture", _Sir);
                         Session["imagetest"] = _Sir;
                         com.Parameters.AddWithValue("category", _Category);
+                        com.Parameters.AddWithValue("likes", 0);
                         int id = (int)com.ExecuteScalar();
 
                         if(id > 0)

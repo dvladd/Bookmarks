@@ -10,114 +10,87 @@
 namespace Bookmarks {
     
     
-    public partial class Bookmarks {
+    public partial class SearchElements {
         
         /// <summary>
-        /// head control.
+        /// TBL1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl TBL1;
         
         /// <summary>
-        /// form1 control.
+        /// TBL2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl TBL2;
         
         /// <summary>
-        /// searchButton control.
+        /// TBL3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button searchButton;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl TBL3;
         
         /// <summary>
-        /// titleTextboxFilter control.
+        /// TBL4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox titleTextboxFilter;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl TBL4;
         
         /// <summary>
-        /// tagsTextboxFilter control.
+        /// TBR1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tagsTextboxFilter;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl TBR1;
         
         /// <summary>
-        /// descriptionTextboxFilter control.
+        /// TBR2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox descriptionTextboxFilter;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl TBR2;
         
         /// <summary>
-        /// ckBoxTitle control.
+        /// TBR3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox ckBoxTitle;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl TBR3;
         
         /// <summary>
-        /// ckBoxTag control.
+        /// TBR4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox ckBoxTag;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl TBR4;
         
         /// <summary>
-        /// ckBoxDescription control.
+        /// roww1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox ckBoxDescription;
-        
-        /// <summary>
-        /// email control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl email;
-        
-        /// <summary>
-        /// password control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputPassword password;
-        
-        /// <summary>
-        /// ContentPlaceHolder1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl roww1;
     }
 }

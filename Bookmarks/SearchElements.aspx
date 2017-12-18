@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/BookmarksMainMenu.Master" AutoEventWireup="true" CodeBehind="MainMenu.aspx.cs" Inherits="Bookmarks.MainMenu" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/BookmarksMainMenu.Master" AutoEventWireup="true" CodeBehind="SearchElements.aspx.cs" Inherits="Bookmarks.SearchElements" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -221,135 +221,139 @@
     </style>
 
 
+
     <div class="row">
 
+        <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6" style="border-color: #337ab7; border-style: double">
+            <h4 class="product clearfix">Last Posted</h4>
+            <ul class="widget-products">
+                <li>
+                    <a href="#">
+                        <span class="img">
+                            <img class="img-thumbnail" src="#" alt="" />
+                        </span>
+                        <span class="product clearfix">
+                            <span runat="server" class="name" id="TBL1">Product name 1
+                            </span>
 
-    <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6"  style="border-color:#337ab7;border-style:double">
-        <h4 class="product clearfix">Last Posted</h4>
-        <ul class="widget-products">
-            <li>
-                <a href="#">
-                    <span class="img">
-                        <img class="img-thumbnail" src="#" alt="" />
-                    </span>
-                    <span class="product clearfix">
-                        <span runat="server" class="name" id="TBL1">Product name 1
                         </span>
-
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="img">
-                        <img class="img-thumbnail" src="#" alt="" />
-                    </span>
-                    <span class="product clearfix">
-                        <span runat="server" class="name" id="TBL2">Product name 2
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="img">
+                            <img class="img-thumbnail" src="#" alt="" />
                         </span>
-                        <span class="price">
-                            <i class="fa fa-money"></i>
+                        <span class="product clearfix">
+                            <span runat="server" class="name" id="TBL2">Product name 2
+                            </span>
+                            <span class="price">
+                                <i class="fa fa-money"></i>
+                            </span>
                         </span>
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="img">
-                        <img class="img-thumbnail" src="#" alt="" />
-                    </span>
-                    <span class="product clearfix">
-                        <span runat="server" class="name" id="TBL3">Product name 3
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="img">
+                            <img class="img-thumbnail" src="#" alt="" />
                         </span>
-                        <span class="price">
-                            <i class="fa fa-money"></i>
+                        <span class="product clearfix">
+                            <span runat="server" class="name" id="TBL3">Product name 3
+                            </span>
+                            <span class="price">
+                                <i class="fa fa-money"></i>
+                            </span>
                         </span>
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="img">
-                        <img class="img-thumbnail" src="#" alt="" />
-                    </span>
-                    <span class="product clearfix">
-                        <span id="TBL4" runat="server" class="name">Product name 4
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="img">
+                            <img class="img-thumbnail" src="#" alt="" />
                         </span>
-                        <span runat="server" class="price">
-                            <i class="fa fa-money"></i>
+                        <span class="product clearfix">
+                            <span id="TBL4" runat="server" class="name">Product name 4
+                            </span>
+                            <span runat="server" class="price">
+                                <i class="fa fa-money"></i>
+                            </span>
                         </span>
-                    </span>
-                </a>
-            </li>
-        </ul>
-    </div>
-
-    <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6"  style="border-color:#337ab7;border-style:double;">
-        <h4 class="product clearfix">Most Voted</h4>
-        <ul class="widget-products">
-            <li>
-                <a href="#">
-                    <span class="img">
-                        <img class="img-thumbnail" src="#" alt="" />
-                    </span>
-                    <span class="product clearfix">
-                        <span runat="server" class="name" id="TBR1">Product name 1
-                        </span>
-                        <span class="price">
-                            <i class="fa fa-money"></i>
-                        </span>
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="img">
-                        <img class="img-thumbnail" src="#" alt="" />
-                    </span>
-                    <span class="product clearfix">
-                        <span runat="server" class="name" id="TBR2">Product name 2
-                        </span>
-                        <span class="price">
-                            <i class="fa fa-money"></i>
-                        </span>
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="img">
-                        <img class="img-thumbnail" src="#" alt="" />
-                    </span>
-                    <span runat="server" class="product clearfix">
-                        <span runat="server" class="name" id="TBR3">Product name 3
-                        </span>
-                        <span class="pricie">
-                            <i class="fa fa-money"></i>
-                        </span>
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="img">
-                        <img class="img-thumbnail" src="#" alt="" />
-                    </span>
-                    <span runat="server" class="product clearfix">
-                        <span runat="server" class="name" id="TBR4">Product name 4
-                        </span>
-                        <span class="price">
-                            <i class="fa fa-money"></i>
-                        </span>
-                    </span>
-                </a>
-            </li>
-        </ul>
-    </div>
+                    </a>
+                </li>
+            </ul>
         </div>
-    <div class="container" id="tourpackages-carousel" style="margin-top:50px">
+
+        <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6" style="border-color: #337ab7; border-style: double;">
+            <h4 class="product clearfix">Most Voted</h4>
+            <ul class="widget-products">
+                <li>
+                    <a href="#">
+                        <span class="img">
+                            <img class="img-thumbnail" src="#" alt="" />
+                        </span>
+                        <span class="product clearfix">
+                            <span runat="server" class="name" id="TBR1">Product name 1
+                            </span>
+                            <span class="price">
+                                <i class="fa fa-money"></i>
+                            </span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="img">
+                            <img class="img-thumbnail" src="#" alt="" />
+                        </span>
+                        <span class="product clearfix">
+                            <span runat="server" class="name" id="TBR2">Product name 2
+                            </span>
+                            <span class="price">
+                                <i class="fa fa-money"></i>
+                            </span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="img">
+                            <img class="img-thumbnail" src="#" alt="" />
+                        </span>
+                        <span runat="server" class="product clearfix">
+                            <span runat="server" class="name" id="TBR3">Product name 3
+                            </span>
+                            <span class="pricie">
+                                <i class="fa fa-money"></i>
+                            </span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="img">
+                            <img class="img-thumbnail" src="#" alt="" />
+                        </span>
+                        <span runat="server" class="product clearfix">
+                            <span runat="server" class="name" id="TBR4">Product name 4
+                            </span>
+                            <span class="price">
+                                <i class="fa fa-money"></i>
+                            </span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="container" id="tourpackages-carousel" style="margin-top:30px">
         <div class="row" id="roww1" runat="server">
         </div>
 
-      
+
     </div>
+
+
+
+
 </asp:Content>
